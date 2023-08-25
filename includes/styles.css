@@ -1,0 +1,56 @@
+body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+form {
+  text-align: center;
+}
+
+form p {
+  margin: 10px 0;
+}
+
+form input[type="file"] {
+  margin: 10px 0;
+}
+
+.file-input-wrapper {
+  position: relative;
+}
+
+.file-input-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.file-input-label {
+  background-color: #f8f9fa;
+  padding: 5px 8px 8px 8px !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-input-label::before {
+  content: "Clique aqui e selecione o XLS";
+}
+
+.file-input-wrapper input[type="file"]:focus + .file-input-label {
+  outline: 1px dotted #000; /* Exemplo de foco */
+}
+
+.file-input-wrapper input[type="file"]:valid + .file-input-label::before {
+  content: attr(data-label); /* Mostrar o nome do arquivo selecionado */
+}
+
+.xls_file {
+  width: 0px;
+  height: 0px;
+}

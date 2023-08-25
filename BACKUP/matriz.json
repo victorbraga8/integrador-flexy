@@ -1,0 +1,69 @@
+{
+  "product": {
+    "name": "Chuteira Adidas Absolado SLX",
+    "slug": "chuteira-adidas-slx",
+    "enabledForEmptyPriceList": true,
+    "referenceCode": "chuteira-adidas-slx",
+    "productType": "product.type.simple",
+    "stockControl": "1",
+    "availableFor": "all",
+    "ncm": "00000000",
+    "integrationCode": "XPTO",
+    "categories": ["Capas"],
+    "variants": [
+      {
+        "referenceCode": "chuteira-adidas-slx-39",
+        "presentation": "Chuteira Adidas Absolado SLX",
+        "price": "239.99",
+        "master": 1,
+        "isFractionalStock": false,
+        "eanCode": "0123456789012",
+        "additionalDeliveryTime": "",
+        "stock": {
+          "quantity": "312"
+        },
+        "dimensionGroup": {
+          "height": "",
+          "depth": "",
+          "weight": "",
+          "width": ""
+        }
+      }
+    ],
+    "descriptionGroup": {
+      "descriptionOne": "descrição um",
+      "descriptionTwo": "descrição dois",
+      "descriptionThree": "descrição três",
+      "descriptionFour": "descrição quatro"
+    },
+    "metaTags": {
+      "title": "Nome do meu produto",
+      "url": "url",
+      "keyword": "calçado, tênis, corrida",
+      "description": "este é um calçado muito confortável",
+      "trackingId": "21354654654654"
+    },
+    "images": [
+      "https://meusite.com.br/imagens/imagem.png",
+      {
+        "url": "https://meusite.com.br/imagens/imagem2.png",
+        "isMaster": true
+      },
+      {
+        "url": ""
+      }
+    ],
+    "properties": [
+      {
+        "referenceCode": "1",
+        "value": ""
+      }
+    ],
+    "videos": [
+      {
+        "code": "xYbZKilfUiowd",
+        "description": "A descrição do meu vídeo aqui"
+      }
+    ]
+  }
+}

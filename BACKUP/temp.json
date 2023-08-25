@@ -1,0 +1,69 @@
+{
+  "product": {
+    "name": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+    "slug": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+    "enabledForEmptyPriceList": true,
+    "referenceCode": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+    "productType": "product.type.simple",
+    "stockControl": "1",
+    "availableFor": "all",
+    "ncm": "00000000",
+    "integrationCode": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+    "categories": ["Capas "],
+    "variants": [
+      {
+        "referenceCode": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+        "presentation": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+        "price": "39.99",
+        "master": 1,
+        "isFractionalStock": false,
+        "eanCode": "0123456789012",
+        "additionalDeliveryTime": "",
+        "stock": {
+          "quantity": "50"
+        },
+        "dimensionGroup": {
+          "height": "",
+          "depth": "",
+          "weight": "",
+          "width": ""
+        }
+      }
+    ],
+    "descriptionGroup": {
+      "descriptionOne": "",
+      "descriptionTwo": "",
+      "descriptionThree": "",
+      "descriptionFour": ""
+    },
+    "metaTags": {
+      "title": "capa-slim-lisa-iphone-7-8-se-2020-branco",
+      "url": "",
+      "keyword": "",
+      "description": "",
+      "trackingId": ""
+    },
+    "images": [
+      "http://www.victorbraga.com.br/public_html/uploads/arquivo-1-Untitled-2.png",
+      {
+        "url": "http://www.victorbraga.com.br/public_html/uploads/arquivo-1-Untitled-2.png",
+        "isMaster": true
+      },
+      {
+        "url": "arquivo-1-WhatsApp Image 2023-08-03 at 14.34.27.jpeg"
+      }
+    ],
+    "properties": [
+      {
+        "referenceCode": "1",
+        "value": ""
+      }
+    ],
+    "videos": [
+      {
+        "code": "",
+        "description": ""
+      }
+    ]
+  }
+}
