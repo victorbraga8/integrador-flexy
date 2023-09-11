@@ -112,12 +112,21 @@ function montaCategoria($categoriaGeral){
 function montaProduto($produto){
 	$jsondata = file_get_contents('matriz.json');
 	$result = json_decode($jsondata, true);
-		
+	
+	// echo "<pre>";
+	// print_r($produto);
+	// echo "</pre>";
+
+	// echo "<pre>";
+	// print_r($result);
+	// echo "</pre>";
+
 	$result['product']['name'] = $produto[1];
 	$result['product']['slug'] = str_replace(",","-", str_replace("/","-", str_replace(" ","-",strtolower($produto[1]))));
-	$result['product']['referenceCode'] = str_replace(",","-", str_replace("/","-", str_replace(" ","-",strtolower($produto[5]))));
-	$result['product']['ncm'] = $produto[6];	
-	$result['product']['integrationCode'] = str_replace(",","-", str_replace("/","-", str_replace(" ","-",strtolower($produto[5]))));
+	$result['product']['referenceCode'] = $produto[5];;
+	$result['product']['ncm'] = $produto[6];
+	$result['product']['integrationCode'] = "";	
+	// $result['product']['integrationCode'] = str_replace(",","-", str_replace("/","-", str_replace(" ","-",strtolower($produto[5]))));
 
 	if($produto[2]){
 		$categoriasLoja = montaCategoria($produto[2]);
@@ -137,10 +146,11 @@ function montaProduto($produto){
 	$result['product']['variants'][0]['presentation'] = str_replace(",","-", str_replace("/","-", str_replace(" ","-",strtolower($produto[1]))));
 	$result['product']['variants'][0]['price'] = $produto[0];
 	$result['product']['variants'][0]['stock']['quantity'] = $produto[4];
+	$result['product']['variants'][0]['eanCode'] = $produto[7];
 	$result['product']['descriptionGroup']['descriptionOne'] = $produto[8];
 	$result['product']['descriptionGroup']['descriptionTwo'] = $produto[9];
-	$result['product']['descriptionGroup']['descriptionThree'] = $produto[10];
-	$result['product']['descriptionGroup']['descriptionFour'] = "";
+	$result['product']['descriptionGroup']['descriptionThree'] = "";
+	$result['product']['descriptionGroup']['descriptionFour'] = $produto[10];
 	$result['product']['metaTags']['title'] = str_replace(",","-", str_replace("/","-", str_replace(" ","-",strtolower($produto[1]))));
 	$result['product']['metaTags']['url'] = '';
 	$result['product']['metaTags']['keyword'] = '';
@@ -178,6 +188,12 @@ function montaProduto($produto){
 	$result['product']['videos'][0]['description']  = '#';
 
 	$jsondataFinal = json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
+	// echo "<pre>";
+	// print_r($jsondataFinal);
+	// echo "</pre>";
+
+	// die();
 	return $jsondataFinal;
 }	
 

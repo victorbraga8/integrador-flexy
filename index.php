@@ -23,7 +23,15 @@ if($_POST['integracao']){
 				$quantidadeArquivos = sizeof($_FILES[$i.'-arquivos']['name']);
 				for($j=0; $j < $quantidadeArquivos; $j++){ 
 					$nomeArquivo = "arquivo-".$i."-".$_FILES[$i.'-arquivos']["name"][$j];
+					// echo $nomeArquivo.'<br>';
 					$enviaArquivo = ftp_put($ftp["conn"], "/domains/victorbraga.com.br/public_html/uploads/".$nomeArquivo, $_FILES[$i.'-arquivos']["tmp_name"][$j], FTP_BINARY);
+
+					// if ($enviaArquivo) {
+					//     echo "Arquivo transferido com sucesso! <br>";
+					// } else {
+					//     echo "Falha ao transferir o arquivo <br>";
+					// }
+
 					$arquivoFtp = "https://www.victorbraga.com.br/uploads/".$nomeArquivo;
 					// $arquivoFtp = $nomeArquivo;
 					array_push($fotosProdutos, $arquivoFtp);
@@ -58,9 +66,9 @@ if($_POST['integracao']){
 			}else{
 				echo "<p>Erro: ".$produto[1].'</p>';				
 			}
-			sleep(5);
-			echo $limparTela;			
+			sleep(5);		
 		}
+		echo $limparTela;	
 	}
 		
 	die();
